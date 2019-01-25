@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Automation;
 using System.Diagnostics;
+using FunctionLib;
 
 namespace ReferencePoint
 {
@@ -84,8 +85,9 @@ namespace ReferencePoint
 
         public Form1()
         {
-            string resourcesFolder = System.Environment.GetFolderPath(Environment.SpecialFolder.Resources);
-            Settings.CursorFilePath = Path.Combine(resourcesFolder, "BullsEye_48.cur");
+            //string resourcesFolder = System.Environment.GetFolderPath(Environment.SpecialFolder.Resources);
+            string resourcesFolder = DirectoryHelper.GetCurrentModuleDirectory();
+            Settings.CursorFilePath = Path.Combine(resourcesFolder, @"..\..\Resources\BullsEye_48.cur");
             InitializeComponent();
             pb_Target.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pb_Target_MouseDown);
             pb_Target.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pb_Target_MouseUp);

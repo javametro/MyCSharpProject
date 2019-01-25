@@ -91,5 +91,11 @@
     <Content Include="Resources\stop_64.png" />
     <Content Include="Resources\video-fill_64.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FunctionLib\FunctionLib.csproj">
+      <Project>{72295689-6b8e-49e4-979b-edb485ec8fbb}</Project>
+      <Name>FunctionLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
